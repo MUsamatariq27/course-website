@@ -1,0 +1,239 @@
+@media screen {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.heading {
+  font-family: fantasy;
+  font-size: 20px;
+  text-align: center;
+}
+
+.pageheader {
+  text-align: justify;
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: #ccc;
+}
+
+.overheadnav {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu {
+  list-style-type: none;
+  border: solid black;
+  padding: 0;
+  width: 100%;
+  background-color: #048EDA;
+  height: auto;
+  position:relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu_other {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  background-color: #048EDA;
+  height: auto;
+  position:relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.menuitem{
+  display: inline;
+  float: left;
+  padding: 5px;
+
+}
+
+.overheadnav a{
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.overheadnav a:hover {
+  background-color: grey;
+}
+
+.content {
+  justify-content:center;
+  flex-flow: row;
+  padding: 5px;
+}
+
+.content h2{
+  color: #B1000E;
+  align-items: flex-start;
+  flex: 30%;
+}
+
+.content a{
+  color: #B1000E;
+}
+
+.content a:hover{
+  color: #023F9D;
+}
+
+
+.row {
+  display: flex;
+}
+
+
+.row h2{
+  align-self:flex-start;
+  flex-wrap: wrap;
+  background-color: grey;
+  text-align: center;
+  border: solid black 2px;
+}
+
+.row p {
+  font-size: 16px;
+  display:flex;
+  padding: 5px;
+  align-self:flex-end;
+  color: black;
+  text-align: center;
+
+}
+
+.row li {
+  list-style: circle;
+}
+
+.calendar {
+  padding: 20px;
+  border: solid black 5px;
+  align-items: center;
+}
+
+.empty_sidebar {
+	z-index:-1;
+	margin:0px;
+  padding:0px;
+  width: 100px;
+  height: 100%;
+  position:fixed;
+  top:0;
+  left:0;
+  background-color: #048EDA;
+}
+
+.text_alignment {
+	text-align:center;
+}
+
+
+.text_alignment2_labs {
+
+	display: block;
+	text-align:left;
+	text-indent: 75px;
+}
+
+.footer{
+  font-family: verdana;
+  left:0;
+  bottom:0;
+  font-size: 8px;
+  position:flex-flow;
+  width:100%;
+  text-align: center;
+}
+
+.footer2{
+  font-family: verdana;
+  left:0;
+  bottom:0;
+  font-size: 8px;
+  position:fixed;
+  width:100%;
+  text-align: center;
+}
+
+
+.login_header {
+  font-family: sans-serif;
+  color: #AD1F00;
+  font-size: 20px;
+  text-align: center
+}
+
+.button {
+  background-color: #e7e7e7; /* Green */
+  border: none;
+  font-size: 25px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 15px;
+}
+
+.center_buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: #008CBA; /* Green */
+  color: black;
+}
+
+input[type=text] {
+  font-size: 16px;
+  width: 100%;
+  padding: 25px;
+  margin: 25px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+input[type=password] {
+  font-size: 16px;
+  width: 100%;
+  padding: 25px;
+  margin: 25px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+input[type=submit] {
+  background-color: #002B47;
+  color: white;
+  width: 100%;
+  padding: 25px;
+  margin: 25px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.login-header {
+  font-size: 25px;
+  text-align: center;
+  color: #660000;
+  display: inline-block;
+  width: 100%;
+  padding: 25px;
+  margin: 8px;
+}

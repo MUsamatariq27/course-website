@@ -1,0 +1,52 @@
+body{
+	font-family: century gothic;
+	background: url(Classicuoft.jpg);
+	background-size: cover;
+}
+
+.signup{
+	background: rgba(48, 65, 81, 0.8);
+	padding: 40px;
+	width:250px;
+	height:420px;
+	margin:auto;
+
+}
+
+form{
+	text-align: center;
+}
+
+input
+{
+	width:240px;
+	text-align: center;
+	border:none;
+	font-family:century gothic;
+	font-size: 16px
+	font-weight:200px;
+	padding:10px 0;
+}
+
+
+input[type=button]{
+	border:none;
+	width:190px;
+	background: white;
+	color: #000;
+	font-size: 16px;
+	padding: 10px 0;
+	border-radius: 12px;
+	cursor: pointer;
+}
+
+input[type=button]:hover{
+	color:#fff;
+	background-color: #BDB768;
+
+}
+
+h2{
+	color:white;
+
+}

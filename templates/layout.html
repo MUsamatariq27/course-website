@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSCB20 ~ Introduction to Databases and Web Applications </title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+  {% endwith %}
+  {% block body %}{% endblock %}
+  
+  </head>
+  <body>
+
+<div class="container">
+
+    <div class="heading">CSCB20 - Introduction to Databases and Web Applications</div>
+    <div class="overheadnav">  <!-- navigation fixed to the top -->
+      <div class="menu">
+        <div class="menuitem"><h3><a href="{{ url_for('home') }}">Home</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('calendar') }}">Calendar</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('news') }}">News</a></h3></div>
+        <div class="menuitem"><h3><a target="_blank" href="https://piazza.com/mail.utoronto.ca/winter2017/cscb20/home">Discussion Board</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('lectures') }}">Lectures</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('labs') }}">Labs</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('assignments') }}">Assignments</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('tests') }}">Tests</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('resources') }}">Resources</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('feedback') }}">Anon. Feedback</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('grades') }}">Grades</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('logout') }}">Logout</a></h3></div>
+      </div>
+    </div>
+
+  </div>
+
+<div class="container">
+  {% block content %}
+  {% endblock %}
+</div>
+
+    </body>
+    </html>

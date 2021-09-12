@@ -1,0 +1,77 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/resources_page.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+
+	<section id="page_title">
+	        <h1>Useful resources for CSCB20</h1>
+	</section>
+
+    <section>
+        <h3><u>W3Schools</u></h3>
+        <p><small>
+            <a href="https://www.w3schools.com/">W3Schools</a> is an educational website for learning web technologies online. Content includes tutorials and references relating to HTML, CSS, JavaScript, Python, SQL and Bootstrap
+        </small></p>
+    </section>
+
+
+    <section>
+        <h3><u>Piazza</u></h3>
+        <p><small>
+            <a href="https://piazza.com/class/jr7mjhytaij3jc"> Piazza </a> is a discussion forum with many features that are designed specifically for use with courses. We encourage you to post questions (and answers!) on piazza, and read what other questions your classmates have posted. The CSC B20 Piazza page will be monitored by your instructors and teaching assistants.
+
+            However, since piazza is run by another company, we also encourage you to read the privacy policy carefully and only sign up if you are comfortable with it. Contact the course coordinator if you have additional questions about using piazza.
+        </small></p>
+    </section>
+
+
+    <section >
+        <h3><u>Python Documentation</u></h3>
+        <p><small>
+            There is extensive <a href="https://docs.python.org/3/">Python documentation</a>; you can use it online or click the first link to download the documentation to your own computer. (Please do not download it to your Teaching Labs account; use the online version instead.)
+
+            Reading this documentation is not mandatory for the course, and any part of it which is not covered in the lectures would not be considered part of the course. But it is a good idea, especially towards the end of the course, to begin to learn to use it. Please, ask if you have any questions!
+        </small></p>
+    </section>
+
+
+    <section>
+        <h3><u>Midterm Test and Final Examination</u></h3>
+        <p><small>
+            The sample tests below are from past offerings of CSCB20.  A word of advice: study first without looking at the solutions. Remember, you won't have solutions to refer to during the test — make sure you focus on how to solve each problem, rather than just what the answer is.
+            <br>
+            Note: These solutions were not formatted for posting and may contain small errors that previous instructors didn't fix in the files. For some problems, there may be more than one correct solution. If you have questions about solutions, please ask on Piazza.
+            <br>
+            <a href="../static/dummy.pdf">Sample Midterm 1</a> <span>|</span>
+            <a href="../static/dummy.pdf">Sample Midterm 2</a> <span>|</span>
+            <a href="#">Sample Midterm 3</a>
+            <br>
+            <a href="../static/dummy.pdf">Sample Exam 1</a> <span>|</span>
+            <a href="../static/dummy.pdf">Sample Exam 2</a> <span>|</span>
+            <a href="../static/dummy.pdf">Sample Exam 3</a> <span>|</span>
+        </small></p>
+    </section>
+</div>
+
+
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+</footer>
+
+</body>
+</html>
+   

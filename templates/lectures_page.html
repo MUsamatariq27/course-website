@@ -1,0 +1,155 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/lectures_page.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+    <section id="page_title">
+        <h1>Lecture Schedule</h1>
+        <p>Please print and bring these notes/worksheets to class.</p>
+    </section>
+    <div class="team_tbl">
+        <div class="team_tbl_body">
+            <div class="team_tbl_row">
+                <div class="tbl_cell">Week</div>
+                <div class="tbl_cell">Topic</div>
+                <div class="tbl_cell">Reading</div>
+                <div class="tbl_cell">Material</div>
+                <div class="tbl_cell">In class notes</div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell">1</div>
+                <div class="tbl_cell">Introduction, Databases background</div>
+                <div class="tbl_cell"><a href="https://www.w3schools.com/css/"> Here</a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf"> PDF </a></div>
+                <div class="tbl_cell">
+                	<a href="../static/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="../static/dummy.pdf">Solutins.pdf</a>
+                </div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell">2</div>
+                <div class="tbl_cell">Schema Diagrams,Relational Algebra </div>
+                <div class="tbl_cell"><a href="https://www.w3schools.com/css/"> Here</a> </div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf"> PDF </a> </div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="../static/dummy.pdf">Solutins.pdf</a> </div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell">3</div>
+                <div class="tbl_cell">Schema Diagrams,Relational Algebra </div>
+                <div class="tbl_cell"><a href="https://www.w3schools.com/css/"> Here</a>  </div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf"> PDF </a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="../static/dummy.pdf">Solutins.pdf</a>  </div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell">4</div>
+                <div class="tbl_cell">SQLandMYSQL</div>
+                <div class="tbl_cell"><a href="https://www.w3schools.com/css/"> Here</a> </div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf"> PDF </a> </div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="../static/dummy.pdf">Solutins.pdf</a> </div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell">5</div>
+                <div class="tbl_cell">MYSQL Queries,and Editing Tables </div>
+                <div class="tbl_cell"><a href="https://www.w3schools.com/css/"> Here</a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf"> PDF </a> </div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="../static/dummy.pdf">Solutins.pdf</a> </div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell">6</div>
+                <div class="tbl_cell">MYSQL Outer Joins,views,Null</div>
+                <div class="tbl_cell"><a href="https://www.w3schools.com/css/"> Here</a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf"> PDF </a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="../static/dummy.pdf">Solutins.pdf</a>  </div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell">7</div>
+                <div class="tbl_cell">HTML CSS</div>
+                <div class="tbl_cell"><a href="https://www.w3schools.com/css/"> Here</a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf"> PDF </a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="../static/dummy.pdf">Solutins.pdf</a> </div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell">8</div>
+                <div class="tbl_cell">PHP</div>
+                <div class="tbl_cell"><a href="https://www.w3schools.com/css/"> Here</a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf"> PDF </a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="../static/dummy.pdf">Solutins.pdf</a>  </div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell">9</div>
+                <div class="tbl_cell">PHP and SQL</div>
+                <div class="tbl_cell"><a href="https://www.w3schools.com/css/"> Here</a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf"> PDF </a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="../static/dummy.pdf">Solutins.pdf</a> </div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell">10</div>
+                <div class="tbl_cell">Java Script and JQuery</div>
+                <div class="tbl_cell"><a href="https://www.w3schools.com/css/"> Here</a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf"> PDF </a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="../static/dummy.pdf">Solutins.pdf</a>  </div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell">11</div>
+                <div class="tbl_cell">JQuery,AJAX,JSON</div>
+                <div class="tbl_cell"><a href="https://www.w3schools.com/css/"> Here</a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf"> PDF </a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="../static/dummy.pdf">Solutins.pdf</a> </div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell">12</div>
+                <div class="tbl_cell">Last Year's Final</div>
+                <div class="tbl_cell"><a href="https://www.w3schools.com/css/"> Here</a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf"> PDF </a></div>
+                <div class="tbl_cell"><a href="../static/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="../static/dummy.pdf">Solutins.pdf</a> </div>
+            </div>
+        </div>
+    </div>
+<!-- team_tbl.com -->
+
+</div>
+
+
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" class="footer_links">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+</footer>
+
+</body>
+</html>
+   

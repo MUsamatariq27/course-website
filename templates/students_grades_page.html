@@ -1,0 +1,105 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/students_grades_page.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body onload="hide_form()">
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+
+    <div id="container">
+        
+        <section id="page_title">
+            <h1>Mark Submission</h1>
+            <h3>Overview</h3>
+            <p class='desc'>Here are the marks for all the submitted assignments, labs, quizzes, the midterm, and the final exam. Please note to submit any remark requests you may have by clicking on the button next to your mark, and stating your reason for the remark in the text box .
+            </p>
+            <p>For grade entry, please click <a href="/grade_submission">here</a></p>
+            <p>To viewe remark requests, please click <a href="/view_remark_requests">here</a></p>
+        </section>
+
+        <div id="flex_container">
+            <div id="marks_container">
+                <div class="assignment_tbl">
+                    <div class="assignment_tbl_body">
+                        <div class="assignment_tbl_row">
+                            <div class="tbl_cell">Full Name</div>
+                            <div class="tbl_cell">utorid</div>
+                            <div class="tbl_cell">Assignment</div>
+                            <div class="tbl_cell">Midterm</div>
+                            <div class="tbl_cell">Final</div>
+                            <div class="tbl_cell"></div>
+                        
+                        </div>
+                        {% for student_marks_arr in students_marks %}
+                            <div class="assignment_tbl_row">
+                            {% for elem in student_marks_arr %}
+                                <div class="tbl_cell"> <p>{{elem}}</p> </div>
+                            {% endfor %}
+                                <div class="tbl_cell">
+                                <button onclick="display_form('{{ student_marks_arr[0] }}', '{{ student_marks_arr[1] }}', {{ student_marks_arr[2] }}, {{ student_marks_arr[3] }},{{ student_marks_arr[4] }})">Edit</button>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div id="form_container" >
+                <form id="mark_edit_form" method="POST" action="/editmarks">
+                    <label for="name">Student Name</label>
+                    <input type="text" name="name" id="name_inpt" readonly value="">
+                    <br><br>
+                    <label for="utorid">utorid</label>
+                    <input type="text" name="utorid" readonly id="utorid_inpt" value="">
+                    <br><br>
+                    <label for="assignment">Assignment</label>
+                    <input type="text" name="assignment"id="assigment_inpt" value="">
+                    <br><br>
+                    <label for="midterm">Midterm</label>
+                    <input type="text" name="midterm" id="midterm_inpt" value="">
+                    <br><br>
+                    <label for="final">Final</label>
+                    <input type="text" name="final" id="final_inpt" value="">
+                    <br><br>
+                    <input type="submit" value="Submit Changes" onclick="alert('Grades updated successfully')">
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+<script type="text/javascript">
+    function display_form(name, utorid, assignment, midterm, final){
+        $("#mark_edit_form").show();
+        $("#name_inpt").val(name);
+        $("#utorid_inpt").val(utorid);
+        $("#assigment_inpt").val(assignment);
+        $("#midterm_inpt").val(midterm);
+        $("#final_inpt").val(final);
+    }
+
+    function hide_form(){
+        $("#mark_edit_form").hide();
+    }
+</script>
+
+
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" class="footer_links">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+</footer>
+
+</body>
+</html>
+   

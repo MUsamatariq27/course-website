@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSCB20 ~ Introduction to Databases and Web Applications </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src = "{{ url_for('static', filename='js/lib.js') }}"></script>
+  </head>
+  {% extends "layout.html" %}
+  {% block content %}
+<body>
+
+  <form class="form" action="/edit_marks" method="POST">
+
+<br>
+  <u><b> Go back to the previous tab and look at the marks you don't want to change for the student  </b></u>
+  <p>
+  <b> UTORID </b> <br>
+  <TEXTAREA NAME="student_utorid" ROWS=1 COLS=50 WRAP style="margin-left:100px;" style="text-indent:100px;" ></TEXTAREA >
+  </p>
+
+  <b> Q1 </b> <br>
+  <TEXTAREA NAME="q1" ROWS=1 COLS=50 WRAP style="margin-left:100px;" style="text-indent:100px;" ></TEXTAREA >
+  </p>
+
+  <b> Q2 </b> <br>
+  <TEXTAREA NAME="q2" ROWS=1 COLS=50 WRAP style="margin-left:100px;" style="text-indent:100px;" ></TEXTAREA >
+  </p>
+
+  <b> Q3 </b> <br>
+  <TEXTAREA NAME="q3" ROWS=1 COLS=50 WRAP style="margin-left:100px;" style="text-indent:100px;" ></TEXTAREA >
+  </p>
+
+  <b> A1 </b> <br>
+  <TEXTAREA NAME="a1" ROWS=1 COLS=50 WRAP style="margin-left:100px;" style="text-indent:100px;" ></TEXTAREA >
+  </p>
+
+  <b> A2 </b> <br>
+  <TEXTAREA NAME="a2" ROWS=1 COLS=50 WRAP style="margin-left:100px;" style="text-indent:100px;" ></TEXTAREA >
+  </p>
+
+
+  <input type="submit" value="Submit" width=97%; height =100; class="btn" style ="width: 96%;"
+    style ="height: 100px;" style="text-align: center;"  >
+
+</form>
+
+
+</body>
+  {% endblock %}
+</html>

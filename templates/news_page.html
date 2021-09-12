@@ -1,0 +1,67 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/news_page.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+    <section id="page_title">
+        <h1>Course News</h1>
+        <h3>Weekly Updates</h3>
+        <p class='desc'>Please check regularly to stay updated. Please note updates do not happen every week.</p>
+    </section>
+    <div class="assignment_tbl">
+        <div class="assignment_tbl_body">
+            <div class="assignment_tbl_row">
+                <div class="tbl_cell">Week</div>
+                <div class="tbl_cell">Update</div>
+                <div class="tbl_cell">Date</div>
+            </div>
+            <div class="assignment_tbl_row">
+                <div class="tbl_cell">1</div>
+                <div class="tbl_cell">Lecture one will be held in IC130 today</div>
+                <div class="tbl_cell">7/01/2019</div>
+            </div>
+            <div class="assignment_tbl_row">
+                <div class="tbl_cell">6</div>
+                <div class="tbl_cell">No Lecture today due to snowstorm!</div>
+                <div class="tbl_cell">06/02/2019</div>
+            </div>
+            <div class="assignment_tbl_row">
+                <div class="tbl_cell">8</div>
+                <div class="tbl_cell">Midterm@9AM</div>
+                <div class="tbl_cell">12/02/2019</div>
+            </div>
+            <div class="assignment_tbl_row">
+                <div class="tbl_cell">12</div>
+                <div class="tbl_cell">Final Week of Class.Will go over exam topics!</div>
+                <div class="tbl_cell">06/04/2019</div>
+            </div>
+
+        </div>
+    </div>
+    <h3>FAQ</h3>
+    <p class='desc'>Q.Will news be posted 24hrs before the event?</p>
+    <p>A.We post news as soon as we find out.This may be earleir or later than 24hrs to the event.</p>
+
+</div>
+
+
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" class="footer_links">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+</footer>
+
+</body>
+</html>
+   

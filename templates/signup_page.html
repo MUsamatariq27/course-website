@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Sign up</title>
+	<link href="../static/Newlogin.css" rel="stylesheet" type="text/css"/>
+</head>
+	<body>
+		<div class="signup">
+			<form method="post">
+				<h2>Sign up</h2>
+                <select name="user_type">
+                    <option value="Student">Student</option>
+                    <option value="Instructor">Instructor</option>
+                </select><br><br>
+				<input type="text" name="name" placeholder="Full name"><br><br>
+				<input type="text" name="utorid" placeholder=" utorid"><br><br>
+				<input type="password" name="user_pwd" placeholder="password"><br><br>
+                <p> {{ msg }} </p>
+				<input type="submit" value="Sign up" name="" id="">
+                <br><br>
+			</form>
+		</div>
+	</body>
+</html>

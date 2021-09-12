@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src = "{{ url_for('static', filename='js/lib.js') }}"></script>
+
+  </head>
+  <body>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <h3>{{ message }}</h3>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+
+    <form action="{{ url_for('instructor_auth') }}" method="POST">
+
+    <div class="login-header">
+      <h1>Instructor Login</h1>
+    </div>
+
+    <input type="text" placeholder="UTORID" name="username" style ="width: 95%;"
+    style ="height: 100px;" style="text-align: center;">
+    <input type="password" placeholder="PASSWORD" name="password"style ="width: 95%;"
+    style ="height: 100px;" style="text-align: center;">
+
+    <input type="submit" value="Log in" class="btn"style ="width: 96%;"
+    style ="height: 100px;" style="text-align: center;">
+	
+
+	
+
+    </form>
+  </body>
+</html>

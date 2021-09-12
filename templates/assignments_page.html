@@ -1,0 +1,81 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/assignments_page.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+    <section id="page_title">
+        <h1>Assignments</h1>
+        <h3>Overview</h3>
+        <p class='desc'>Here are the assignment and exercise topics, weights, and due dates. I will be posting the exercise and assignment handouts here. All exercises and assignments <b>MUST</b> be submitted on <a href="http://markus.utsc.utoronto.ca/cscb20w19/en">MarkUs.</a></p>
+    </section>
+    <div class="assignment_tbl">
+        <div class="assignment_tbl_body">
+            <div class="assignment_tbl_row">
+                <div class="tbl_cell">#</div>
+                <div class="tbl_cell">Topic</div>
+                <div class="tbl_cell">Handout</div>
+                <div class="tbl_cell">Weight</div>
+                <div class="tbl_cell">Due Date</div>
+                <div class="tbl_cell">Solution</div>
+            </div>
+            <div class="assignment_tbl_row">
+                <div class="tbl_cell">1</div>
+                <div class="tbl_cell">Relational Algebra and MySQL</div>
+                <div class="tbl_cell"><a href="Attachments/dummy.pdf">PDF</a></div>
+                <div class="tbl_cell">5%</div>
+                <div class="tbl_cell">
+                    Part 1. Wednesday Feb. 1, 11.59pm 
+                    <br>
+                    Part 2 and 3 Feb. 11, 11.59pm
+                </div>
+                <div class="tbl_cell">
+                	<a href="Attachments/dummy.pdf">Questions.pdf</a>
+                	<br>
+                	<a href="Attachments/dummy.pdf">Solutins.pdf</a>
+                </div>
+            </div>
+            <div class="assignment_tbl_row">
+                <div class="tbl_cell">2</div>
+                <div class="tbl_cell">HTML and CSS</div>
+                <div class="tbl_cell"><a href="Attachments/dummy.pdf">PDF</a></div>
+                <div class="tbl_cell">7%</div>
+                <div class="tbl_cell">March 13th</div>
+                <div class="tbl_cell">_</div>
+            </div>
+            <div class="assignment_tbl_row">
+                <div class="tbl_cell">3</div>
+                <div class="tbl_cell">HTML,CSS,JAVAScript</div>
+                <div class="tbl_cell">_</div>
+                <div class="tbl_cell">12%</div>
+                <div class="tbl_cell">March 26th</div>
+                <div class="tbl_cell">_</div>
+            </div>
+
+        </div>
+    </div>
+    <h3>FAQ</h3>
+    <p class='desc'>Q.If the mysql portion asks for a director or actor without specifying which attributes,what should I return?</p><p>A.Return the first name, last name</p>
+
+</div>
+
+
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" class="footer_links">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+</footer>
+
+</body>
+</html>
+   

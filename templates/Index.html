@@ -1,0 +1,62 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+
+<div class="container">
+    <section id="page_title">
+            <h1>CSCB20-Introduction to Databases and Web Applications</h1>
+    </section>
+
+    <section id="Description">
+            <h3><u>Course Description</u></h3>
+            <small>
+                <p>A practical introduction to databases and Web app development. Databases: terminology and applications; creating, querying and updating databases; the entity-relationship model for database design. Web documents and applications: static and interactive documents; Web servers and dynamic server-generated content; Web application development and interface with databases.
+                </p>
+
+                <p><b>Prerequisite</b> Some experience with programming in an imperative language such as Python, Java or C.</p>
+
+                <p><b>Exclusion</b> This course may not be taken after - or concurrently with - any C- or D-level CSC course.</p>
+                <span><b>Syllabus</b></span>  <a href="../static/dummy.pdf"><b> PDF</b></a>
+            </small>  
+    </section>
+
+    <h3><u>General Information</u></h3>
+    <div id="general_info">
+        <img id="instructor_picture" src="../static/Anna_Bretscher.jpg">
+        <div class="wrapper">
+            <section id="instructor_info">
+                    <p><small><b>Instructor:</b> Dr.Anna Bretscher</small></p>
+
+                    <p><small><b>Email: <a href="mailto:bretscher@utsc.utoronto.ca">bretscher@utsc.utoronto.ca</a></b></small></p>
+                    <p><small><b>Office:</b>  IC349</small></p>
+                    <p><small><b>Phone:</b> (416)-208-4745</small></p>
+                    <p><small><b>Lectures:</b> Mondays 9:15-11:00 in HW 216</small></p>
+                    <p><small><b>Office Hours:</b> Wednesdays 11:00-12:00</small></p>
+            </section>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+</footer>
+
+</body>
+</html>
+
+
+   

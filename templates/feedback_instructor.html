@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSCB20 ~ Introduction to Databases and Web Applications </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src = "{{ url_for('static', filename='js/lib.js') }}"></script>
+  </head>
+  {% extends "layout.html" %}
+  {% block content %}
+<body>
+
+  {% for item in items %}
+  <table>
+	  <tr><h2> Feedback for: {{ item['instructor'] }} </h2></tr>
+      <tr><h3>What do you like about instructor teaching style? </h3>{{ item['like_instructor'] }}</tr>
+      <tr><h3>What do you recommend the instructor do to improve their teaching? </h3>{{ item['recommend_class'] }}</tr>
+      <tr><h3>What do you like about the labs? </h3>{{ item['like_labs'] }}</tr>
+      <tr><h3>What do you recommend the instructor do to improve their lab teaching? </h3>{{ item['recommend_labs'] }}</tr>
+  </table>
+  {% endfor %}
+
+</body>
+  {% endblock %}
+</html>

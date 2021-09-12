@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/calendar_page.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+<section id="Intro">
+
+        <h1>Important Dates</h1>
+
+</section>
+
+<iframe src="https://calendar.google.com/calendar/embed?src=qrk7d8g6oh9ccqi2oesovj3rbg%40group.calendar.google.com&ctz=America%2FToronto" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" class="footer_links">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+    </footer>
+
+</body>
+</html>

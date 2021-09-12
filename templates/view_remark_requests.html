@@ -1,0 +1,53 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/view_remark_requests.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="page_title">
+            <h1>Grades</h1>
+            <h3>Overview</h3>
+            <p class='desc'>Here are the marks for all the submitted assignments, labs, quizzes, the midterm, and the final exam. Please note to submit any remark requests you may have by clicking on the button next to your mark, and stating your reason for the remark in the text box .
+        </section>
+        <div class="assignment_tbl">
+            <div class="assignment_tbl_body">
+                <div class="assignment_tbl_row">
+                    <div class="tbl_cell">name</div>
+                    <div class="tbl_cell">utorid</div>
+                    <div class="tbl_cell">Evaluation</div>
+                    <div class="tbl_cell">Reason for remark</div>
+                </div>
+                {% for remark_request in remark_requests %}
+                    <div class="assignment_tbl_row">
+                    {% for elem in remark_request %}
+                        <div class="tbl_cell"><p>{{ elem }}</p></div>
+                    {% endfor %}
+                    </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </div>
+
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" class="footer_links">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+</footer>
+
+</body>
+</html>
+   

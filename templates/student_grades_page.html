@@ -1,0 +1,90 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/student_grades_page.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body onload="hide_form()">
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="page_title">
+            <h1>Grades</h1>
+            <h3>Overview</h3>
+            <p class='desc'>Here are the marks for all the submitted assignments, labs, quizzes, the midterm, and the final exam. Please note to submit any remark requests you may have by clicking on the button next to your mark, and stating your reason for the remark in the text box .
+        </section>
+        <div id="flex_container">
+
+            <div class="assignment_tbl">
+                <div class="assignment_tbl_body">
+                    <div class="assignment_tbl_row">
+                        <div class="tbl_cell">Name</div>
+                        <div class="tbl_cell">Weight</div>
+                        <div class="tbl_cell">Score</div>
+                        <div class="tbl_cell"></div>
+                    </div>
+                    <div class="assignment_tbl_row">
+                        <div class="tbl_cell">Assignment 1</div>
+                        <div class="tbl_cell">20%</div>
+                        <div class="tbl_cell">{{ assignment_grade }}</div>
+                        <button class="tbl_cell" onclick="display_form('Assignment')">Request Remark</button>
+                    </div>
+                    <div class="assignment_tbl_row">
+                        <div class="tbl_cell">Midterm</div>
+                        <div class="tbl_cell">30%</div>
+                        <div class="tbl_cell"> {{ midterm_grade }}</div>
+                        <button class="tbl_cell" onclick="display_form('Midterm')">Request Remark</button>
+
+                    </div>
+                    <div class="assignment_tbl_row">
+                        <div class="tbl_cell">Final</div>
+                        <div class="tbl_cell">50%</div>
+                        <div class="tbl_cell"> {{ final_grade }} </div>
+                        <button class="tbl_cell" onclick="display_form('Final')">Request Remark</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="form_container">
+                <form id="remark_request_form" method="POST" action="/remark_request">
+                    <label>Evaluation</label>
+                    <input type="text" class="inpt" id="evaluation" name="evaluation" readonly>
+                    <br><br>
+                    <label>Explanation</label>
+                    <textarea name="reason" class="inpt" placeholder="Reason for regrade..."></textarea>
+                    <br>
+                    <input type="submit" class="inpt" value="Submit request" onclick="alert('Remark request submitted successfully')">
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function hide_form(){
+            $("#remark_request_form").hide();
+        }
+
+        function display_form(evaluation){
+            $("#remark_request_form").show();
+            $("#evaluation").val(evaluation);
+        }
+    </script>
+
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" class="footer_links">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+</footer>
+
+</body>
+</html>
+   

@@ -1,0 +1,71 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/student_feedback.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+<section id="page_title">
+
+        <h1>CSCB20 Feedback</h1>
+</section>
+
+<p><small>To send a message to the instructor, use the form below. Feedback of all kinds is welcome. You do not need to enter your name or email address unless you wish to receive a direct response. Note that your question or a paraphrase of it (but not your name) may be posted (and answered) on the discussion board, in lecture, or in some other public forum.
+</small></p>
+
+    <form method="POST">
+        <br>
+        <label for="name">Instructor: </label>
+        <select name="utorid">
+        	{% for instructor in instructors %}
+        		<option value="{{ instructor }}"> {{ instructor }} </option>
+        	{% endfor %}
+		</select>
+
+       <p> What do you like about the instructors teaching? </p>
+
+        <textarea name="Q1" placeholder="Feedback..."></textarea>
+        <br>
+
+       <p>What do you recommend the instructor to do to improve their teaching?</p>
+
+        <textarea name="Q2" placeholder="Feedback..."></textarea>
+        <br>
+
+       <p>What do you like about the labs?</p>
+
+        <textarea name="Q3" placeholder="Feedback..."></textarea>
+        <br>
+
+       <p>What do you recommend the lab instructors do to improve their lab teaching?</p>
+        
+        <textarea name="Q4" placeholder="Feedback..."></textarea>
+        <br>
+
+       <p>Please feel free to provide any additional questions, concerns, or feedback regarding the course or instructor.</p>
+
+        <textarea name="Q5" placeholder="Feedback..."></textarea>
+        <br><br>
+        <input id="submit_feedback" onclick="alert('Thank you for the feedback')" type="submit" name="" value="Submit Feedback" >
+    </form>
+
+</div>
+
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" class="footer_links">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+</footer>
+
+</body>
+</html>
+   

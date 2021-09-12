@@ -1,0 +1,78 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/course_team_page.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+    <section id="page_title">
+        <h1>Meet the course team!</h1>
+    </section>
+    <div class="team_tbl">
+        <div class="team_tbl_body">
+            <div class="team_tbl_row">
+                <div class="tbl_cell"></div>
+                <div class="tbl_cell">Role</div>
+                <div class="tbl_cell">Name</div>
+                <div class="tbl_cell">Office Hours</div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell"> <img src="../static/Instructor.png"></div>
+                <div class="tbl_cell">Instructor</div>
+                <div class="tbl_cell">Abbas Attrawala</div>
+                <div class="tbl_cell">Saturday @ 5PM</div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell"> <img src="../static/Instructor.png"></div>
+                <div class="tbl_cell">Teaching Assistant</div>
+                <div class="tbl_cell">  Kevin Zhang</div>
+                <div class="tbl_cell">Saturday @ 5PM</div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell"> <img src="../static/Instructor.png"></div>
+                <div class="tbl_cell">Teaching Assistant</div>
+                <div class="tbl_cell"> Suhailah Rahman</div>
+                <div class="tbl_cell">Saturday @ 5PM</div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell"> <img src="../static/Instructor.png"></div>
+                <div class="tbl_cell">Teaching Assistant</div>
+                <div class="tbl_cell">Dharmik Shah</div>
+                <div class="tbl_cell">Saturday @ 5PM</div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell"> <img src="../static/Instructor.png"></div>
+                <div class="tbl_cell">Teaching Assistant</div>
+                <div class="tbl_cell">Xia Zhongyang</div>
+                <div class="tbl_cell">Saturday @ 5PM</div>
+            </div>
+            <div class="team_tbl_row">
+                <div class="tbl_cell"> <img src="../static/Instructor.png"></div>
+                <div class="tbl_cell">Teaching Assistant</div>
+                <div class="tbl_cell">Brian Lam</div>
+                <div class="tbl_cell">Saturday @ 5PM</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" class="footer_links">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+</footer>
+
+</body>
+</html>
+   

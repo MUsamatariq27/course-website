@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to CSCB20</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src = "{{ url_for('static', filename='js/lib.js') }}"></script>
+  </head>
+  <body>
+
+    <div class="login_header">
+      <h1>Welcome to CSCB20</h1>
+    </div>
+
+<div class="center_buttons">
+
+    <div class="button">
+      <button class="button" onclick="studentLogin()">Student</button>
+    </div>
+
+    <div class="button">
+      <button class="button" onclick="instructorLogin()">Instructor</button>
+    </div>
+
+</div>
+
+<div class="center_buttons">
+  <div class="button">
+    <button class="button" onclick="registerUser()">New User</button>
+    
+  </div>
+</div>
+
+  </body>
+</html>

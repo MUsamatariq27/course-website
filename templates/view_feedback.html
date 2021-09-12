@@ -1,0 +1,93 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/view_feedback.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+    <section id="page_title">
+
+            <h1>CSCB20 Anonymous Feedback</h1>
+    </section>
+
+    <p><small>Below is anonymous feedback from the students regarding teaching material, the instructor, and overall course experience.
+    </small></p>
+
+    <h3>Q1</h3>
+    <div class="feedback_tbl">
+            <div class="feedback_tbl_body">
+
+                {% for feedback in Q1feedback %}
+                    <div class="feedback_tbl_row"><p>{{ feedback }}</p></div>
+                {% endfor %}
+
+            </div>
+    </div>
+
+    <h3>Q2</h3>
+
+    <div class="feedback_tbl">
+            <div class="feedback_tbl_body">
+
+                {% for feedback in Q2feedback %}
+                    <div class="feedback_tbl_row"><p>{{ feedback }}</p></div>
+                {% endfor %}
+
+            </div>
+    </div>
+
+    <h3>Q3</h3>
+
+    <div class="feedback_tbl">
+            <div class="feedback_tbl_body">
+
+                {% for feedback in Q3feedback %}
+                    <div class="feedback_tbl_row"><p>{{ feedback }}</p></div>
+                {% endfor %}
+
+            </div>
+    </div>
+
+    <h3>Q4</h3>
+
+    <div class="feedback_tbl">
+            <div class="feedback_tbl_body">
+
+                {% for feedback in Q4feedback %}
+                    <div class="feedback_tbl_row"><p>{{ feedback }}</p></div>
+                {% endfor %}
+
+            </div>
+    </div>
+
+    <h3>Q5</h3>
+
+    <div class="feedback_tbl">
+            <div class="feedback_tbl_body">
+
+                {% for feedback in Q5feedback %}
+                    <div class="feedback_tbl_row"><p>{{ feedback }}</p></div>
+                {% endfor %}
+
+            </div>
+    </div>
+
+</div>
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" class="footer_links">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+</footer>
+
+</body>
+</html>
+   

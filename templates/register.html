@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New Account Creation</title>
+  </head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src = "{{ url_for('static', filename='js/lib.js') }}"></script>
+  <body>
+
+    <div class="login_header">
+      <h1>Welcome to CSCB20</h1>
+    </div>
+
+    <form class="form" name="reg_form"action="/newuser" method="post" onsubmit="validate_form_instructorlogin()">
+      <p>Enter your First Name: <input type="text" name="firstname" style ="width: 95%;"
+    style ="height: 100px;" style="text-align: left;"></p>
+      <p>Enter your Last Name: <input type="text" name="lastname"style ="width: 95%;"
+    style ="height: 100px;" style="text-align: left;"></p>
+      <p>Enter your UTORID: <input type="text" name="utorid"style ="width: 95%;"
+    style ="height: 100px;" style="text-align: left;"></p>
+      <p>Enter your Password: <input type="password" name="password"style ="width: 95%;"
+    style ="height: 100px;" style="text-align: left;"></p>
+
+      <label class="container">Student
+        <input type="checkbox" checked="true" name="students">
+      </label>
+
+      <label class="container">Instructor
+        <input type="checkbox" checked="true" name="instructors">
+      </label>
+
+      <label>
+        <input type="submit" value="submit" style ="width: 95%;"
+    style ="height: 100px;" style="text-align: center;" >
+      </label>
+    </form>
+
+
+
+    <!-- <label>
+      <input type="submit" onclick="newuser()">
+    </label> -->
+
+  </body>
+</html>

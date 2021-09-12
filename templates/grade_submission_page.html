@@ -1,0 +1,63 @@
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/grade_submission_page.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="nav_labels">
+                {% for nav_elem in nav_elems %}
+                    <li><a href="{{ nav_elem.url }}">{{ nav_elem.label}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+    <section id="page_title">
+
+        <h1>CSCB20 Grade Entry</h1>
+    </section>
+
+    <p><small>This page is to enter student marks.
+    </small></p>
+
+
+    <form method="POST" action="/register_grade">
+        <label>Utorid: </label>
+        <select class="input_box" name="utorid">
+            {% for utorid in students_utorids %}
+                <option value="{{ utorid[0] }}">{{ utorid[0] }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+        <label>Assignment: </label>
+        <input type="text" name="assignment" class="input_box" placeholder="John">
+        <br><br>
+
+        <label>Midterm: </label>
+        <input type="text" name="midterm" class="input_box" placeholder ="Midterm">
+        <br><br>
+
+        <label>Final Exam: </label>
+        <input type="text" name="final" class="input_box" placeholder="Final">
+        <br><br>
+
+        <p><input type="submit" value="Submit Grade" onclick="alert('Grades submitted successfully')"></p>
+
+    </form>
+    
+</div>
+
+
+
+<footer>
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" class="footer_links">Department of Computer Science at UofT</a>
+    <P>Site designed by Noah & Abdennour</P>
+</footer>
+
+</body>
+</html>
+   

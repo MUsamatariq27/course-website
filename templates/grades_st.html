@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSCB20 ~ Introduction to Databases and Web Applications </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src = "{{ url_for('static', filename='js/lib.js') }}"></script>
+  </head>
+  {% extends "layout.html" %}
+  {% block content %}
+<body>
+<br> 
+
+
+  {% for item in items %}
+  <table>
+	  <tr><h2> Grades for {{ item['firstname'] }} {{ item['lastname'] }}</h2></tr>
+	  <tr><h3>Utorid: </h3>{{ item['utorid'] }}</tr>
+      <tr><h3>Quiz1: </h3>{{ item['q1'] }}</tr>
+      <tr><h3>Quiz2: </h3>{{ item['q2'] }}</tr>
+      <tr><h3>Quiz3: </h3>{{ item['q3'] }}</tr>
+      <tr><h3>Assignment1: </h3>{{ item['a1'] }}</tr>
+      <tr><h3>Assignment2: </h3>{{ item['a2'] }}</tr>
+  </table>
+  {% endfor %}
+  
+  <b>Fill out this form for a remark request</b>
+  <h2> <a href="https://forms.gle/NYhou23rUHHnnekg6" , target="_blank">  Remark Form </h2></a>
+
+
+</body>
+  {% endblock %}
+</html>

@@ -1,0 +1,62 @@
+body{
+	font-family:sans-serif;
+	color:#fff;
+	background: url(Classicuoft.jpg);
+	background-size:cover;
+
+}
+.signin{
+	background: rgba(48, 65, 81, 0.8);
+	padding:40px;
+	width:250px;
+	height:400px;
+	margin:auto;
+}
+
+form{
+	text-align: center;
+}
+
+input{
+	width:240px;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 16px
+	font-weight:200px;
+	padding:10px 0;
+	
+
+}
+
+input[type=button]{
+	border:none;
+	width:190px;
+	background: white;
+	color: #000;
+	font-size: 16px;
+	line-height: 25px;
+	padding: 10px 0;
+	border-radius: 12px;
+	cursor: pointer;
+}
+
+input[type=button]:hover{
+	color:#fff;
+	background-color: #BDB768;
+
+}
+
+h2{
+	color:white;
+
+}
+a{
+	color:yellow;
+	text-decoration: blink;
+}
+a:hover
+{
+	color: skyblue;
+}
+
+

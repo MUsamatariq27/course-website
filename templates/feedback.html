@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSCB20 ~ Introduction to Databases and Web Applications </title>
+  </head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src = "{{ url_for('static', filename='js/lib.js') }}"></script>
+  <body>
+<div class="container">
+
+    <div class="heading">CSCB20 - Introduction to Databases and Web Applications</div>
+    <div class="overheadnav">  <!-- navigation fixed to the top -->
+      <div class="menu_other">
+        <div class="menuitem"><h3><a href="{{ url_for('home') }}">Home</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('calendar') }}">Calendar</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('news') }}">News</a></h3></div>
+        <div class="menuitem"><h3><a target="_blank" href="https://piazza.com/mail.utoronto.ca/winter2017/cscb20/home">Discussion Board</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('lectures') }}">Lectures</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('labs') }}">Labs</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('assignments') }}">Assignments</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('tests') }}">Tests</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('resources') }}">Resources</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('feedback') }}">Anon. Feedback</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('grades') }}">Grades</a></h3></div>
+        <div class="menuitem"><h3><a href="{{ url_for('logout') }}">Logout</a></h3></div>
+      </div>
+    </div>
+
+  </div>
+
+	<div class="empty_sidebar"> </div>
+
+
+	<h1 style="text-indent:100px;"> Feedback </h1>
+
+  <form class="form" action="/feedback" method="post" >
+
+    <p style="text-indent:100px;">
+  	<b> Who is your Instructor? </b> <br>
+  	<TEXTAREA NAME="instructor" ROWS=1 COLS=50 WRAP style="margin-left:100px;" style="text-indent:100px;" ></TEXTAREA >
+	* Please carefully enter your instructor's name in the textbox ( instructor1, instructor2 )  
+  	</p>
+
+
+
+
+	<br>
+
+	<p style="text-indent:100px;">
+	<b> What do you like about instructor teaching style? </b> <br>
+	<TEXTAREA NAME="like_instructor" ROWS=10 COLS=50 WRAP style="margin-left:100px;" style="text-indent:100px;" ></TEXTAREA >
+	</p>
+
+	<br>
+
+	<p style="text-indent:100px;">
+	<b> What do you recommend the instructor do to improve their teaching? </b> <br>
+	<TEXTAREA NAME="recommend_class" ROWS=10 COLS=50 WRAP style="margin-left:100px;" style="text-indent:100px;" ></TEXTAREA >
+	</p>
+
+	<br>
+
+	<p style="text-indent:100px;">
+	<b> What do you like about the labs? </b> <br>
+	<TEXTAREA NAME="like_labs" ROWS=10 COLS=50 WRAP style="margin-left:100px;" style="text-indent:100px;" ></TEXTAREA >
+	</p>
+
+
+	<br>
+
+	<p style="text-indent:100px;">
+	<b> What do you recommend the instructor do to improve their lab teaching? </b> <br>
+	<TEXTAREA NAME="recommend_labs" ROWS=10 COLS=50 WRAP style="margin-left:100px;" style="text-indent:100px;" ></TEXTAREA >
+	</p>
+
+	<p style="text-indent:75px;">
+
+	<input type="submit" style ="width: 100px;"
+    style ="height: 100px;"
+	style="text-align: center;"> </input>
+	Pressing 'Submit' will submit your feedback to your instructor and will display a new empty Form.
+</p>
+	<br><br>
+
+	</FORM>
+
+
+
+	<div class="footer">
+      <a href="http://web.cs.toronto.edu/people/faculty.htm"><h2>Faculty CS UofT</h2></a>
+	  <img src ="/static/img&docs/UofTlogo.jpg" alt="UofT Logo" width="150" height="150">
+      <h2>Made by Nabil & Muhammad</h2>
+    </div>
+
+
+  </form>
+  </body>
+
+  </html>

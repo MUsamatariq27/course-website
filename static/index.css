@@ -1,0 +1,100 @@
+body{
+	font:18px/1.5 century gothic;
+	padding:0;
+	margin:0;
+	background-color:#f4f4f4;
+}
+
+.container{
+	width:90%;
+	margin:auto;
+}
+
+#nav_labels li {
+	display: inline-block;
+}
+
+#nav_labels a{
+	text-decoration: none;
+	color:#fff;
+	font-size: 14px;
+	text-align: center;
+	display: block;
+	padding-left: 20px; 
+
+}
+
+#nav_labels {
+	margin-top: 0px;
+	text-align: center;
+	padding-left: 50px;
+
+}
+
+header{
+	background:#35424A;
+	min-height:55px;
+	border-bottom:3px solid;
+	position:sticky;
+	top:0;
+}
+
+
+#nav_labels li a:hover{
+	color:#ffd700;
+}
+
+
+#page_title{
+	text-align:left;
+}
+
+#description{
+	margin-top: 100px;
+	margin-bottom: 10px;
+}
+
+footer {
+	padding-top:1px;
+	font-size: 11px;
+	text-align:center;
+	background:#35424A;
+	color:#ffffff;
+	height:55px;
+	border-bottom:1px solid;
+}
+
+
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 160px;
+    text-align: left;
+}
+input {
+  display: inline-block;
+}
+footer a{
+	color: #ffffff;
+}
+
+nav {
+	position: fixed;
+}
+
+@media(min-width: 1000px){
+	#general_info{
+		display: flex;
+	}
+	#nav_labels {
+		margin-top: 15px;
+	}
+}
+
+#instructor_picture{
+	padding-right: 15px;
+	padding-bottom: 15px;
+	width: 250px;
+}

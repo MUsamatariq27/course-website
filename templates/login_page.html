@@ -1,0 +1,21 @@
+<html>
+<head>
+
+<title>Untitled Document</title>
+<link href="../static/Newlogin.css" rel="stylesheet" type="text/css"/>
+</head>
+	<body>
+		<div class="signin">
+			<form method="post">
+				<h2>Login</h2>
+				<input type="text" name="utorid" placeholder="utorid" value={{utorid}}><br><br>
+				<input type="password" name="user_pwd" placeholder="Password"><br><br>
+				<input type="submit" value="Login">
+
+				<p> {{ msg }} </p>
+			</form>
+			Don't have an account? <a href="/signup_page">Sign up</a>
+		</div>
+	</body>
+</html>
+
